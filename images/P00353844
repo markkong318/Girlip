@@ -1,0 +1,905 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:fb="http://ogp.me/ns/fb#" lang="ja">
+<head>
+<meta property="og:image" content="https://s.yimg.jp/images/kazoc/pc/promo/teasersite/img/kazoc_ogp_image.jpg" />
+<meta property="og:url" content="https://girlip.travel.yahoo.co.jp/about/" />
+<meta property="og:site_name" content="Yahoo!トラベル ガーリップ" />
+<meta property="og:type" content="website" />
+<meta property="fb:app_id" content="277401169050113" />
+
+<title>女子旅プラン作成　girlip（ガーリップ）- しおり閲覧 - Yahoo!トラベル</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="keywords" lang="ja" content="旅行プラン,ガイドブック,しおり,女子旅">
+<meta name="description" content="友達とつくる、旅のしおり。カンタンな予定登録や、旅先で便利な地図など、旅の計画をもっと便利に楽しく。 ">
+<meta name="viewport" content="width=device-width,maximum-scale=1.5">
+
+<link href="https://s.yimg.jp/images/travel/dev/girlip/v2/css/common.css?20160407" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://s.yimg.jp/images/travel/dev/girlip/v2/css/common_x2.css" media="only screen and (-webkit-min-device-pixel-ratio : 1.5),only screen and (min-device-pixel-ratio : 1.5)">
+
+<link href="https://s.yimg.jp/images/travel/dev/domestic.hotel/next/plugin/jquery_ui/jquery-ui-1.10.4.min.css" rel="stylesheet" type="text/css">
+<link href="https://s.yimg.jp/images/travel/dev/domestic.hotel/next/plugin/jquery_ui/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" type="text/css">
+
+
+</head>
+<body class="yj950-1">
+
+<!-- EMG -->
+
+
+
+<!-- /EMG -->
+
+
+<div class="header">
+<h1><a href="https://girlip.travel.yahoo.co.jp/about/">girlip 思い出の旅行は大切なしおりと</a></h1>
+<p>
+<a class="logoYt" href="https://travel.yahoo.co.jp">Yahoo! JAPAN トラベル</a>
+<span>こんにちは、gong_sinjiaさん
+<br>
+[ <a href="https://account.edit.yahoo.co.jp/eval_profile?.src=trv&.intl=jp&.done=https://girlip.travel.yahoo.co.jp/private/P00353844">登録情報</a> - <a href="https://login.yahoo.co.jp/config/login?logout=1&.src=trv&.done=https://girlip.travel.yahoo.co.jp/about/?done2=https://girlip.travel.yahoo.co.jp/private/P00353844">ログアウト</a> ]</span>
+</p>
+<ul>
+<li><a href="https://girlip.travel.yahoo.co.jp/private/" class="bg01">しおり作成</a></li>
+<li><a href="https://girlip.travel.yahoo.co.jp/mypage/" class="bg02">マイしおり</a></li>
+<li><a class="bg03" target="_blank" href="https://www.yahoo-help.jp/app/answers/list/p/611/c/964,10471">ヘルプ</a></li>
+</ul>
+</div><!-- ./header -->
+<!-- .mdNorthAlert -->
+<div class="mdNorthAlert">
+<noscript>
+<div class="noscript">
+<p>ガーリップをご利用いただくためには、JavaScriptの設定を有効にする必要があります。<br>
+ご利用のブラウザのJaveScriptの設定が無効になっている場合は、<br>
+<a href="https://www.yahoo-help.jp/app/noscript">こちらの手順</a>に従ってJavaScriptの設定を有効にしてください
+</p>
+</div>
+</noscript>
+<div class="promotion" style="display:none">
+<p>センターテキストセンターテキストセンターテキストセンターテ33文字</p>
+</div>
+<div class="maintenance" style="display:none">
+<p>メンテメンテメンテメンテメンテメンテメンテメンテメンテメン33文字</p>
+</div>
+</div>
+<!-- /.mdNorthAlert -->
+<style type="text/css"><!--
+
+.tabiGaiyo .tabiGaiyoDate {
+    width: auto;
+}
+
+.gaiyo_count {
+    width: auto;
+}
+
+.kotei h3 span {
+    height: 45px;
+}
+
+/* スポット追加モーダル 海外注意文言 */
+.spot_modal_subttl_attn {
+    padding-left: 10px;
+}
+
+.comment_ret_btn {
+    position: absolute;
+    top: -152px;
+    left: -40px;
+}
+
+.comment_ret_btn div {
+    height: 76px;
+    width: 180px;
+}
+
+/* みんなのメモ */
+.modal .frm05 .mm_ex {
+    width: 600px;
+}
+
+.frm05 .mm_btn_ex {
+    right: -105px;
+}
+
+.mm_chbox {
+    position: absolute;
+    top: 35px;
+    right: 105px;
+    font-size: 0.75em;
+}
+
+.mm_chbox div {
+    position: absolute;
+    top: 3px;
+    left: 22px;
+    width: 70px;
+    line-height: 1.25em;
+}
+
+
+/* デザイン調整 編集画面 */
+
+.tabiGaiyo .gWrp h2, .tabiGaiyo .gaiyo, .tabiGaiyo .gaiyo textarea {
+    width: 570px;
+}
+
+/* 上記で効かなかったので */
+#summary_block {
+    width: 570px;
+}
+
+.tabiGaiyo .gWrp h2, .tabiGaiyo .gaiyo {
+    height: 22px;
+}
+
+.tabiGaiyo .gWrp h2 input {
+    font-size: 0.88em;
+    letter-spacing: -1px;
+}
+
+.gaiyo_count {
+    top: 165px;
+}
+
+.header > p {
+    /* 0.75だとちっちゃいかも */
+    font-size: 0.81em;
+}
+
+.header li {
+    width: 85px;
+}
+
+.mainNav li {
+    font-size: 1em;
+}
+
+.tab_delete_btn {
+    top: -4px;
+    right: 5px;
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 1px;
+    background: #765946;
+    color: #eee;
+    border-radius: 50px;
+    opacity: 1;
+    filter: alpha(opacity=100);        /* ie 6 7 */
+    -ms-filter: "alpha(opacity=100)";  /* ie 8 */
+    text-shadow: none;
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) {
+    .tab_delete_btn {
+         top: -7px;
+         right: 8px;
+         width: 25px;
+         height: 25px;
+         line-height: 0.75em;
+         font-size: 1.5em;
+         font-weight: normal;
+     }
+}
+
+.mainNav .tsuika a {
+    padding: 5px 0 0;
+    line-height: 1.2;
+    height: 48px;
+}
+
+.mainNav li a {
+    border-left: medium none;
+}
+
+.tabiTomo h3 {
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    width: 141px;
+    padding: 25px 0 0 35px;
+}
+
+.chudanMenu > ul > li > a {
+    width: 68px;
+    padding: 20px 0 0 20px;
+}
+
+.btnTsuiSak {
+    font-size: 0.75em;
+}
+
+.kotei .ohayo h3 span, .kotei .oyasumi h3 span {
+    font-size: 0.88em;
+}
+
+.kotei .ohayo h3 var {
+    font-size: 1.25em;
+}
+
+.kotei h4, .kotei h4 span {
+    font-size: 1.5em;
+}
+
+.kotei dl {
+    font-size: 0.88em;
+    margin: 7px 0 0;
+    padding: 0 0 3px;
+}
+
+.kotei .spot .spot_rating_wrap {
+    position: relative;
+    top: 2px;
+}
+
+.kotei .btnEdit {
+    font-size: 0.88em;
+    line-height: 56px;
+}
+
+.btnTsuika {
+    font-size: 1.25em;
+    line-height: 62px;
+}
+
+/* コメント系 */
+.comment > ul > li img {
+    width: 60px;
+    margin: 0 10px 0 0;
+}
+
+.comment a.btn09 {
+    font-size: 0.88em;
+}
+
+/* 追加モーダル系 */
+.modal .gallery li > a {
+    padding: 45px 0 0 25px;
+}
+
+.gallery02 li p {
+    font-size: 0.75em;
+    text-shadow: -1px -1px 3px #fff, 1px -1px 3px #fff, -1px 1px 3px #fff,1px 1px 3px #fff;
+}
+
+.modal .gallery li strong {
+    text-shadow: 0 0 4px #777777;
+}
+
+.modal .gallery li img {
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+
+/* デザイン調整 閲覧画面 */
+.tabiGaiyo .gWrp02 {
+    /*text-shadow: 0 0 2px #aaa, 0 0 4px #ccc;*/
+    top: 30px;
+}
+
+.tabiGaiyo .gWrp02 h2 {
+    font-size: 2.13em;
+    margin: 0 0 15px;
+}
+
+.tabiGaiyo .gWrp02 p {
+    font-size: 0.81em;
+}
+
+
+.tabiGaiyo .tabiJikan {
+    bottom: 70px;
+    letter-spacing: 3px;
+    /*text-shadow: 0 0 2px #aaa, 0 0 4px #ccc;*/
+}
+
+.tabiGaiyo .tabiJikan dt {
+    font-size: 0.88em;
+    letter-spacing: 1px;
+}
+
+.tabiGaiyo .tabiJikan dd {
+    font-size: 2.88em;
+    letter-spacing: 3px;
+}
+
+.tabiGaiyo .tabiJikan dd span {
+    letter-spacing: 0;
+    margin: 0 9px 0 -9px;
+}
+
+.schedView .appo h4.right {
+    font-size: 1.38em;
+    font-weight: normal;
+    padding-right: 50px;
+    top: -7px;
+}
+
+.schedView .appo h4.left {
+    font-size: 1.38em;
+    font-weight: normal;
+    padding-left: 50px;
+    top: -7px;
+}
+
+.schedView .appo .type, .schedView .appo .type03 {
+    top: -11px;
+}
+
+.schedView .appo .inner.min > p {
+    font-size: 1em;
+}
+
+.schedView .appo .transfer, .schedView .appo .free {
+    padding: 15px 18px 0;
+}
+
+.schedView .appo h4 .leader {
+    padding: 0 5px;
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) {
+    .schedView .appo h4 .leader {
+        letter-spacing: -10px;
+         padding: 0 15px 0 5px;
+    }
+}
+
+.comment > ul > li em {
+    margin: 0 8px 0 0;
+}
+
+.comment > ul > li p {
+    padding: 0 0 5px 15px;
+}
+
+.comment .cmd {
+    color: #999;
+}
+
+.schedView .appo .info dd:first-child {
+    padding-top: 1px;
+}
+
+.review span {
+    position: relative;
+    top: -3px;
+}
+
+
+/* QA指摘対応 */
+/* 編集モーダル80文字制限メッセージ */
+.edit_lim_txt {
+    position: absolute;
+    top: 93px;
+    right: 70px;
+    font-size: 0.88em;
+    color: #444444;
+
+}
+
+/* これなんで -40px 付けたんですかね？ */
+.modal .btn04 {
+    margin: 0;
+}
+
+/* 背景画像変更枠 */
+.haikei_girlip_osusume_ret {
+    position: absolute;
+    top: 8px;
+    left: 62px;
+    font-size: 0.88em;
+    letter-spacing: 1px;
+    text-shadow: 0 0 3px #fff, 0 0 3px #fff;
+}
+
+.haikei_girlip_osusume_ret a {
+    color: #765946;
+    font-weight: bold;
+}
+
+/* 背景画像変更form */
+.frm04 {
+    position: relative;
+}
+
+.haikei_up_err {
+    position: absolute;
+    top: 12px;
+    left: 30px;
+    color: #f00;
+    display: none;
+}
+
+/* 必須項目バッジ */
+.title_nes {
+    position: absolute;
+    top: 7px;
+    left: 625px;
+    width: 70px;
+    padding: 6px 0;
+    text-align: center;
+    background: #fc649d;
+    font-size: 0.63em;
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 20px;
+}
+
+.title_nes span {
+    font-size: 0.75em;
+}
+
+/* モーダル閉じるボタン用 */
+.modal_batsu_a {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.modal .batsu {
+    position: static;
+}
+
+/* 日付の選択済みタブ */
+.mainNav .sel a {
+    cursor: default;
+}
+
+/* ソートハンドル領域のカーソル形状 */
+.kotei .btnShosai {
+    cursor: s-resize;
+}
+
+/* スポット追加時エラー */
+.spot_search_err {
+    position: absolute;
+    top: 120px;
+    left: 0px;
+    font-size: 0.88em;
+    color: #f00;
+}
+
+.spot_modal_second {
+    position: relative;
+}
+
+/* IE透過背景対策 タイトル、概要系*/
+.tabiGaiyo .gWrp h2, .tabiGaiyo .gaiyo, .tabiGaiyo .date, .tabiGaiyo .change {
+    background: url("https://s.yimg.jp/images/travel/dev/girlip/v2/images/bg_semitrnsp_01.png") repeat scroll 0 0 transparent;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://s.yimg.jp/images/travel/dev/girlip/v2/images/bg_semitrnsp_01.png',sizingMethod='scale');
+}
+
+/* スポット追加ボタン */
+.gallery02 li .abs {
+    background: url("https://s.yimg.jp/images/travel/dev/girlip/v2/images/bg_semitrnsp_01.png") repeat scroll 0 0 transparent;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://s.yimg.jp/images/travel/dev/girlip/v2/images/bg_semitrnsp_01.png',sizingMethod='scale');
+}
+
+/* スポットのノーヒットずれてる */
+.gllr02Wrp > .spot_nohit_free {
+    display: none;
+    left: 20px;
+    position: absolute;
+    top: 0;
+    width: 650px;
+}
+
+.gllr02Wrp > .spot_nohit_free > form {
+    margin: 70px 0;
+    width: 605px;
+}
+
+
+/* なぜかずれているので */
+.mod_modal_error {
+    top: 90px;
+}
+
+/* 移動情報入力時に出す路線へのリンク */
+.mordal_link_transit {
+    position: absolute;
+    right: 0;
+    top: 110px;
+}
+
+.modal .comment .comment_wrapper .memo a.urlLabel {
+  color: #F14077;
+}
+
+--></style>
+
+
+<style type="text/css"><!--
+
+/* common.css新規 */
+.viewModal .comment_modal_delete {
+  margin-top: 0;
+}
+
+/* 印刷用 */
+@media print {
+    .print_sioryback, #emg, #emg2, #emg3 {
+        display: none;
+    }
+}
+
+--></style>
+
+
+
+<!-- ローディング -->
+<script type="text/javascript"><!--
+document.write('<div id="init_cover" class="init_load_wrap">');
+document.write('<div class="init_load_bg"></div>');
+document.write('<img class="init_load_img" src="https://s.yimg.jp/images/travel/dev/girlip/v2/images/loading.gif">');
+document.write('</div>');
+//--></script>
+<!-- ローディング -->
+
+<!-- .tabiGaiyo -->
+<div class="tabiGaiyo">
+<img src="//girlip.c.yimg.jp/girlip-planimg-001/girlip/I0/01/02/000102175.jpg" alt="">
+<div class="gWrp02"><h2>子どもの森公園から加治丘陵へ(仮)ｖ２</h2>
+<p>ムーミン屋敷で楽しく遊ぼう！２０１５年シルバーウィーク限定！</p></div>
+<dl class="tabiJikan">
+<dt>旅の時間</dt>
+<dd>
+9/21<small>（月）</small>
+</dd>
+</dl>
+<ul class="mainNav">
+<!--
+<li><a href="#">7/14 日</a></li>
+<li class="sel"><a href="#">7/15 月</a></li>
+<li class="last"><a href="#">7/16 火</a></li>
+-->
+</ul>
+</div>
+<!-- /.tabiGaiyo -->
+<!-- .tabiTomo -->
+<!-- .tabiTomo -->
+<div id="tabiTomoMenu" class="tabiTomo">
+<h3>旅とも</h3>
+<div class="gallery04">
+<div>
+<ul class="tabiTomoMemberList">
+<!-- left:-325px単位で　5枚のスライド -->
+</ul>
+</div>
+<a class="btnPrev03 opq" data-active="disabled" href="javascript:void(0);">戻る</a><a class="btnNext03 opq" data-active="disabled" href="javascript:void(0);">進む</a>
+<span class="decor02"></span>
+</div>
+<a class="btnTsuiSak" href="javascript:void(0);">旅とも<br>の詳細</a>
+<div class="chudanMenu" id="chudanMenu">
+<ul>
+<li><a class="chuEmail" href="javascript:void(0);">旅ともを<br>
+しおりに<br>
+招待する</a></li>
+<li><a class="chuMap" href="javascript:void(0);">スポット<br>
+マップ<br>
+をみる</a></li>
+<li><a class="chuHoka" href="javascript:void(0);">みんなの<br>
+メモと印刷</a>
+</li>
+<div class="popup" id="else_menu">
+<ul>
+<li><a href="javascript:void(0);">みんなのメモ</a></li>
+<li><a href="javascript:void(0);">しおりを印刷する（PC）</a><div class="attention_txt"><a href="https://blogs.yahoo.co.jp/yjtravel_staff/18447232.html" target="_blank">※綺麗に印刷するには？</a></div></li>
+</ul>
+<span class="triangle"></span>
+</div>
+</ul>
+</div>
+</div>
+<!-- /.tabiTomo --><!-- /.tabiTomo -->
+
+<div class="schedView">
+
+<div class="ue">
+<span class="bgOhayo"></span>
+</div><!-- /.ue -->
+
+<div class="chuo group">
+<h3 class="ohy"><span>おはよう</span></h3>
+<p class="noPlan">登録された予定はありません。</p> 
+<div class="vgridWrapper">
+</div><!-- /.vgridWrapper -->
+
+<h3 class="oys"><span>おかえり</span></h3>
+
+<p class="nextDay">次の日へ</p>
+</div><!-- /.chuo -->
+
+<div class="shita bg01">
+<p>
+<div class="buttons">
+<p class="modPlanError">エラーが発生しました</p>
+<a class="btn03"><span>しおりを編集する</span></a>
+</div><!-- /.buttons -->
+</div><!-- /.shita -->
+
+</div><!-- /.schedVire -->
+
+<div class="bottom">
+<div></div>
+</div>
+
+<div class="contentsFooter">
+<div class="footer">
+
+<div id="pos-s">
+<!--AD-->
+
+<!--/AD-->
+</div>
+
+
+<address>
+<a href="https://about.yahoo.co.jp/docs/info/terms/chapter1.html#cf2nd">プライバシーポリシー</a> -
+<a href="https://about.yahoo.co.jp/docs/info/terms/">利用規約</a> -
+<a href="https://www.yahoo-help.jp/app/answers/list/p/611/c/964,10471">ヘルプ・お問い合わせ</a>
+<br>Copyright (C) 2017 Yahoo Japan Corporation. All Rights Reserved.
+</address>
+</div><!--/.footer--></div><!--/.contentsFooter-->
+
+<!-- .modal(comment) -->
+<div class="viewModal" id="confirmModal" style="display:none"><span class="batsu"><span>×</span>とじる</span>
+<div class="comment vsbl comment_modal_delete">
+<p>メモ・コメントを削除します。よろしいですか？</p>
+<p class="delError">メモ・コメントの削除に失敗しました。時間を置いてから再度お試しください。</p>
+<div>
+<a href="javascript:void(0);" class="btn03 cancel"><span>キャンセル</span></a>
+<a href="javascript:void(0);" class="btn03 iro07 delete"><span>削除</span></a>
+</div>
+</div><!-- /.comment -->
+
+</div><!-- /#confirmModal -->
+<!-- /.modal(comment) -->
+<!-- .modal(comment) -->
+<div class="modal" id="comment_modal"><a class="modal_batsu_a" href="javascript:void(0);"><span class="batsu"><span>×</span>とじる</span></a>
+<h2 class="ttlBg sml">スポット</h2>
+<div class="comment">
+<h5>コメントがあります</h5>
+<ul class="comment_wrapper"></ul>
+</div>
+<div class="frmWrp">
+<form action="" class="frm05 dotRnd"><textarea name="" id="" my-entry='1' placeholder="コメント（メモ）を書く （最大1000文字まで）"></textarea>
+<a href="javascript:void(0);" class="btn10 sml">投稿する</a>
+</form>
+<div id="comment_modal_error_1" class="comment_modal_error_1"></div>
+</div>
+
+<div class="comment vsbl comment_modal_edit">
+<ul>
+<li><img src="" alt="">
+<p><em>il*214kocd</em><span class="cmd">2013/7/2 15:23</span></p>
+<form action="" class="frm05 dotRnd sml"><textarea name="" id="" my-edit='2' placeholder="コメント（メモ）を書く （最大1000文字まで）"></textarea></form>
+<div class="btnBox" id="comment_edit_btn"><a href="javascript:void(0);" class="btn03"><span>変更</span></a><a href="javascript:void(0);" class="btn03 iro07"><span>削除</span></a></div>
+<div class="edit_error">メモ・コメントを入力して下さい</div>
+</li>
+</ul>
+<a href="javascript:void(0);" class="comment_ret_btn"><div></div></a>
+</div>
+
+<div class="comment vsbl comment_modal_delete">
+<p>メモ・コメントを削除します。よろしいですか？</p>
+<div class="comment_delete_btn" id="comment_delete_btn"><a href="javascript:void(0);" class="btn03"><span>キャンセル</span></a><a href="javascript:void(0);" class="btn03 iro07"><span>削除</span></a></div>
+</div>
+
+</div>
+<!-- /.modal(comment) -->
+<!-- .modal tabitomo -->
+<div id="tabitomo_modal" class="modal frndModal"><a class="modal_batsu_a" href="javascript:void(0);"><span class="batsu mdl_cancel"><span>×</span>とじる</span></a>
+<h2 class="ttlBg">旅とも</h2>
+
+<ul class="frndMenu">
+<li class="add" ><span></span><br>旅ともを招待</li>
+<li class="del" ><span></span><br>旅ともを削除</li>
+</ul><!-- /.frndMenu -->
+
+
+<!- ########################################## -->
+<!- ######### ユーザ追加タブ ############# -->
+<!- ########################################## -->
+<div class="frndBody tabAdd">
+<p class="tabDescription">旅ともを招待して、一緒に旅の計画を楽しみましょう。
+※このしおりを見たり、編集したりできるのはあなたと旅ともだけです。ニックネームとメールアドレスを入力して「招待」ボタンを押すと、Yahoo!トラベル ガーリップから旅ともに招待メールが送信されます。</span></p>
+<div class="frndSlideArea">
+
+<div class="tabitomoListWaiting"><img src="//s.yimg.jp/images/travel/dev/girlip/v2/images/loading.gif"></div>
+
+<div class="frndSlideWrapper">
+
+<ul class="frndList">
+<li><input type="text" class="nickname" placeholder="ニックネームを入力 （最大18文字まで）" /><input type="text" class="mailaddress" placeholder="メールアドレスを入力" />
+<li><input type="text" class="nickname" placeholder="ニックネームを入力 （最大18文字まで）" /><input type="text" class="mailaddress" placeholder="メールアドレスを入力" />
+<li><input type="text" class="nickname" placeholder="ニックネームを入力 （最大18文字まで）" /><input type="text" class="mailaddress" placeholder="メールアドレスを入力" />
+<li><input type="text" class="nickname" placeholder="ニックネームを入力 （最大18文字まで）" /><input type="text" class="mailaddress" placeholder="メールアドレスを入力" />
+</ul>
+<ul class="frndList">
+<li><input type="text" class="nickname" placeholder="ニックネームを入力 （最大18文字まで）" /><input type="text" class="mailaddress" placeholder="メールアドレスを入力" />
+<li><input type="text" class="nickname" placeholder="ニックネームを入力 （最大18文字まで）" /><input type="text" class="mailaddress" placeholder="メールアドレスを入力" />
+<li><input type="text" class="nickname" placeholder="ニックネームを入力 （最大18文字まで）" /><input type="text" class="mailaddress" placeholder="メールアドレスを入力" />
+<li><input type="text" class="nickname" placeholder="ニックネームを入力 （最大18文字まで）" /><input type="text" class="mailaddress" placeholder="メールアドレスを入力" />
+</ul>
+<ul class="frndList">
+<li><input type="text" class="nickname" placeholder="ニックネームを入力 （最大18文字まで）" /><input type="text" class="mailaddress" placeholder="メールアドレスを入力" />
+<li><input type="text" class="nickname" placeholder="ニックネームを入力 （最大18文字まで）" /><input type="text" class="mailaddress" placeholder="メールアドレスを入力" />
+<li><input type="text" class="nickname" placeholder="ニックネームを入力 （最大18文字まで）" /><input type="text" class="mailaddress" placeholder="メールアドレスを入力" />
+<li><input type="text" class="nickname" placeholder="ニックネームを入力 （最大18文字まで）" /><input type="text" class="mailaddress" placeholder="メールアドレスを入力" />
+</ul>
+<ul class="frndList">
+<li><input type="text" class="nickname" placeholder="ニックネームを入力 （最大18文字まで）" /><input type="text" class="mailaddress" placeholder="メールアドレスを入力" />
+<li><input type="text" class="nickname" placeholder="ニックネームを入力 （最大18文字まで）" /><input type="text" class="mailaddress" placeholder="メールアドレスを入力" />
+<li><input type="text" class="nickname" placeholder="ニックネームを入力 （最大18文字まで）" /><input type="text" class="mailaddress" placeholder="メールアドレスを入力" />
+<li><input type="text" class="nickname" placeholder="ニックネームを入力 （最大18文字まで）" /><input type="text" class="mailaddress" placeholder="メールアドレスを入力" />
+</ul>
+<ul class="frndList">
+<li><input type="text" class="nickname" placeholder="ニックネームを入力 （最大18文字まで）" /><input type="text" class="mailaddress" placeholder="メールアドレスを入力" />
+<li><input type="text" class="nickname" placeholder="ニックネームを入力 （最大18文字まで）" /><input type="text" class="mailaddress" placeholder="メールアドレスを入力" />
+<li><input type="text" class="nickname" placeholder="ニックネームを入力 （最大18文字まで）" /><input type="text" class="mailaddress" placeholder="メールアドレスを入力" />
+<li><input type="text" class="nickname" placeholder="ニックネームを入力 （最大18文字まで）" /><input type="text" class="mailaddress" placeholder="メールアドレスを入力" />
+</ul>
+</div><!--/.frndSlideWrapper-->
+</div><!--/.frndSlideArea--->
+<a href="#" class="btnPrev01">戻る</a>
+<a href="#" class="btnNext01" >進む</a>
+
+<div class="frndMail">
+<h5>メッセージ入力</h5><span class="error"></span><span class="success"></span>
+<div class="dotRnd">
+<p>
+  <span class="inputHeader">件名</span>
+  <input type="text" class="mailTitle" value="お友達から旅行のしおりに関するお知らせです［Yahoo!トラベル ガーリップ］" data-defvalue="お友達から旅行のしおりに関するお知らせです［Yahoo!トラベル ガーリップ］">
+</p>
+<p>
+  <span class="inputHeader">本文</span>
+  <span class="mailBodyWrapper">
+    <span class="mailBodyTemplate2">Yahoo!トラベル ガーリップより<br>
+<span id="addTabitomoMailBodyNickname"></span> さんからのメッセージ ※名前を変更する場合は<span class="changeNickname" id="changeNickname">こちら</span><br>
+--<br></span>
+    <span><textarea class="mailBody" data-defvalue="メッセージを入力してください" rows="2">メッセージを入力してください
+</textarea></span>
+    <span class="mailBodyTemplate">---<br>
+お友達が、あなたを旅のしおりに招待しました。<br>
+下記に記載されたしおりURLより、しおりを閲覧できます。※しおりの閲覧にはYahoo! JAPAN IDが必要です。<br>
+<br>
+--<br>
+しおりのタイトル　<span class="mailBody_title"></span><br>
+しおりのURL　<span class="mailBody_url"></span><br>
+※URLはサンプルです。<br>
+<br>
+<br>
+<br>
+このメールは、Yahoo! JAPANの「URLをメールで送る」機能を利用して送信されたメールです。<br>
+Yahoo! JAPANは、サービス利用時に指定されたこのメールアドレスの保存およびこのメールの送信以外の目的での利用は行いません。<br>
+<br>
+このメールに心当たりのない方は、お手数ですが下記までご連絡くださいますようお願いいたします。<br>
+https://www.yahoo-help.jp/app/ask/p/2465/form/travel-inquiry
+<br>
+また、このメールにそのまま返信されても、送り主の方にはメールが届きません。ご注意ください。<br>
+<br>
+Yahoo!トラベル ガーリップ <br>
+https://girlip.travel.yahoo.co.jp/about/<br>
+<br>
+---<br></span><!--./mailBodyTemplate-->
+  </span><!--.mailBodyWrapper-->
+</p>
+<a href="#" class="btn02"><span>招待</span></a>
+</div><!--./dotRnd-->
+</div><!--./frndMail-->
+</div><!-- /.frndBody.tabAdd -->
+
+
+<!- ########################################## -->
+<!- ######### ユーザを削除 ############# -->
+<!- ########################################## -->
+<div class="frndBody tabDel">
+<div class="frndSlideArea"><div class="frndSlideWrapper"></div><!--/.frndSlideWrapper--></div><!--/.frndSlideArea--->
+<a href="#" class="btnPrev01">戻る</a>
+<a href="#" class="btnNext01">進む</a>
+
+<p class="frndSbmtBtn"><span class="error sendError"></span><a href="#" class="btn03"><span>旅ともから削除</span></a></p>
+</div><!-- /.frndBody.tabDel -->
+
+</div><!--./frndModal-->
+<!-- /.modal -->
+
+
+<!-- .modal chngProfModal -->
+<div id="change_profile_modal" class="modal chngProfModal"><a class="modal_batsu_a" href="javascript:void(0);"><span class="batsu mdl_cancel"><span>×</span>とじる</span></a>
+<h2 class="ttlBg">旅とも情報変更</h2>
+<div class="modalBody">
+<div class="waiting"><img src="//s.yimg.jp/images/travel/dev/girlip/v2/images/loading.gif"></div>
+
+<h5 class="nickname">ニックネームの変更<span></span></h5>
+<p><input class="nickname" type="text" placeholder="ニックネームを入力 （最大18文字まで）"><a href="javascript:void(0);" class="btn01 nicknameEditBtn">変更</a>
+<span class="nickname_msg error"></span>
+<!--<span class="nickname_msg success">変更しました。<br>ページを更新後、画面に反映されます。</span>-->
+</p>
+
+<h5 class="credential">アイコン画像の変更<span></span></h5>
+<form id="iconUploadForm" action="/api/upload" enctype="multipart/form-data" method="POST" target="iconUploadTarget">
+<div class="credentialLine"><div class="person"><img></div>
+<input id="iconUploadFile" class="fileUp haikeiUploadFile" type="file" name="fileName" size="25">
+</div>
+</form>
+<iframe id="iconUploadFrame" name="iconUploadTarget" style="display:none;"></iframe>
+<div class="iconChangeNote">※アップロードできる画像はGIF、JPG、PNG形式のいずれか、10MBまでです。
+<br/>
+※アップロード画像推奨サイズ：幅300px, 高さ300px以上
+</div>
+<span class="iconChangeError"></span>
+<div class="delete">
+<h5>旅ともを削除</h5>
+<div><a id="changeProfileModalDeleteBtn" href="javascript:void(0);">削除画面を開く</a></div>
+</div>
+
+</div><!--./modalBody-->
+
+<div class="modalIconChangeBody" style="display:none;">
+<div class="iconChangeFrame">
+<div class="iconChangeDragWrapper">
+<img id="iconChangeImage" src="">
+</div><!--./iconChnageDragWrapper" -->
+</div><!--./iconChangeFrame -->
+<div id="iconResizeNavi">
+<div id="iconResizeSlider"></div>
+<a id="iconResizeNgButton"><span>取消</span></a>
+<a id="iconResizeOkButton"><span>決定</span></a>
+</div><!--/#resizeBody-->
+</div><!--./modalIconChangeBody -->
+
+</div><!--./chngProfModal -->
+<!-- /.modal -->
+
+
+
+
+<div class="modal" id="tabitomo_modal_message_1"><a class="modal_batsu_a" href="javascript:void(0);"><span class="batsu mdl_cancel"><span>×</span>とじる</span></a>
+<h3 class="nmdl mdl5" id="normal_modal_text">確認</h2>
+<div class="edit_confirm_btn edit_confirm_btn3">
+<a href="javascript:void(0);" class="btn07 normal_modal_bp" id="normal_modal_cancel"><span>キャンセル</span></a>
+</div>
+</div>
+<script>
+//
+if(typeof YAHOO=="undefined"||!YAHOO){ var YAHOO={}};
+if(typeof YAHOO.JP=="undefined"||!YAHOO.JP){YAHOO.JP={}};
+if(typeof YAHOO.JP.girlip=="undefined"||!YAHOO.JP.girlip){YAHOO.JP.girlip={}};
+YAHOO.JP.girlip.data = {"loadTime":"2017-08-18 08:49:02","httpProxy":"https:\/\/girlip.travel.yahoo.co.jp\/image\/","pageType":"view","crumb":"h6\/5OmNf5xm","yuid":"gong_sinjia","currentUrl":"https:\/\/girlip.travel.yahoo.co.jp\/private\/P00353844","spotmapUrl":"https:\/\/girlip.travel.yahoo.co.jp\/private\/spotmap\/P00353844","ad":{"space_id":"2080267536","emg":[{"value":"<!-- SpaceID=2080267536 loc=EMG noad-spid -->\n","flag":0}],"emg2":[{"value":"<!-- SpaceID=2080267536 loc=EMG2 noad-spid -->\n","flag":0}],"emg3":[{"value":"<!-- SpaceID=2080267536 loc=EMG3 noad-spid -->\n","flag":0}]},"memberInfo":[{"member_id":"000000385582","confirm":"0","type":"owner","nickname":"go*g_*in*ia","image":"https:\/\/s.yimg.jp\/images\/travel\/dev\/girlip\/v2\/images\/img_tabitomonoimage_03.png"}],"schedule":{"info":[{"spot_id":"S000921379","plan_id":"P00353844","spot_day":"1","action_type":"1","spot_name":"\u6c60\u888b\u99c5\u96c6\u5408\u3059\u308b","stay_time":"10","start_time":"9:50","finish_time":"10:00","spot_pics":"https:\/\/s.yimg.jp\/images\/travel\/dev\/girlip\/v2\/images\/img_spare_300_200.png","uid":"","cid":"","lat":"","lon":"","country_code":""},{"transfer_id":"T000464232","plan_id":"P00353844","transfer_type":"0","transfer_time":"60","transfer_day":"1","start_time":"10:00","finish_time":"11:00","transfer_means":"\u897f\u6b66\u6c60\u888b\u7dda\u6025\u884c\u3067\u6c60\u888b\u99c5\u2192\u5143\u52a0\u6cbb\u99c5","commentSet":[{"comment":"10:03-10:46 \u897f\u6b66\u6c60\u888b\u7dda\u6025\u884c(\u98ef\u80fd\u884c)\n463\u5186","comment_id":"000218750","target_id":"T000464232","member_id":"000000385582","time":"2015\u5e749\u670816\u65e5 22\u664236\u5206"},{"comment":"\u5143\u52a0\u6cbb\u99c5\u5468\u8fba\u306b\u30b3\u30f3\u30d3\u30cb\u3001\u30b9\u30fc\u30d1\u30fc\u304c\u306a\u3044\u306e\u3067\u51fa\u767a\u524d\u306b\u5148\u306b\u98f2\u307f\u7269\u3068\u98df\u3079\u7269\u8cb7\u3044\u3066\u65b9\u304c\u3044\u3044\u3002\r\n\r\n\u516c\u5712\u5185\u306b\u81ea\u8ca9\u6a5f\u3042\u308a\u307e\u3059\u3002\r\n\r\n\u3061\u306a\u307f\u306b\u99c5\u304b\u3089\u516c\u5712\u307e\u3067\u7d04\uff14\uff10\u5206\u3067\u6b69\u304f\u3002","comment_id":"000217986","target_id":"T000464232","member_id":"000000385582","time":"2015\u5e749\u670815\u65e5 22\u664243\u5206"}]},{"spot_id":"S000918415","plan_id":"P00353844","spot_day":"1","action_type":"0","spot_name":"\u3042\u3051\u307c\u306e\u5b50\u3069\u3082\u306e\u68ee\u516c\u5712","stay_time":"120","start_time":"11:00","finish_time":"13:00","spot_pics":"https:\/\/girlip.travel.yahoo.co.jp\/image\/img.4travel.jp\/img\/tcs\/t\/tips\/pict\/lrg\/131\/444\/lrg_13144487.jpg","uid":"7840cb1d97c01895814ca56c1333e959f0fb8417","cid":"98c3fee387a42040f9cd0cb8a2889214","lat":"35.83050892","lon":"139.34418067","country_code":"JP","review":"50","reviewUrl":"https:\/\/loco.yahoo.co.jp\/place\/7840cb1d97c01895814ca56c1333e959f0fb8417\/review\/","ratingDisplay":"40","rating":"4.09","genre":"0305007","address":"\u57fc\u7389\u770c\u98ef\u80fd\u5e02\u5927\u5b57\u963f\u9808893-1","station":"\u5143\u52a0\u6cbb(\u897f\u6b66\u9244\u9053)","tel":"042-972-7711","url_pc":"http:\/\/4travel.jp\/domestic\/area\/kanto\/saitama\/tokorozawa\/hanno\/park\/10017565\/"},{"spot_id":"S000918463","plan_id":"P00353844","spot_day":"1","action_type":"1","spot_name":"\u685c\u5c71\u5c55\u671b\u53f0","stay_time":"30","start_time":"13:00","finish_time":"13:30","spot_pics":"https:\/\/s.yimg.jp\/images\/travel\/dev\/girlip\/v2\/images\/img_spare_300_200.png","uid":"","cid":"","lat":"","lon":"","country_code":""},{"spot_id":"S000918440","plan_id":"P00353844","spot_day":"1","action_type":"1","spot_name":"\u52a0\u6cbb\u4e18\u9675\u30cf\u30a4\u30ad\u30f3\u30b0","stay_time":"90","start_time":"13:30","finish_time":"15:00","spot_pics":"https:\/\/s.yimg.jp\/images\/travel\/dev\/girlip\/v2\/images\/img_spare_300_200.png","uid":"","cid":"","lat":"","lon":"","country_code":"","commentSet":[{"comment":"\u52a0\u6cbb\u4e18\u9675\u2192\u4ecf\u5b50\u99c5(\u7d04\uff11\u6642\u9593\uff12\uff15\u5206)\r\n","comment_id":"000217969","target_id":"S000918440","member_id":"000000385582","time":"2015\u5e749\u670815\u65e5 22\u664230\u5206"}]},{"transfer_id":"T000464256","plan_id":"P00353844","transfer_type":"0","transfer_time":"60","transfer_day":"1","start_time":"15:00","finish_time":"16:00","transfer_means":"\u897f\u6b66\u6c60\u888b\u7dda\u6025\u884c\u3067\u4ecf\u5b50\u99c5\u2192\u6c60\u888b\u99c5","commentSet":[{"comment":"16:00-16:52 52\u5206 \u897f\u6b66\u6c60\u888b\u7dda\u6e96\u6025(\u6c60\u888b\u884c)\r\n16:20-17:04 44\u5206 \u897f\u6b66\u6c60\u888b\u7dda\u6025\u884c(\u6c60\u888b\u884c)\r\n16:30-17:16 46\u5206 \u897f\u6b66\u6c60\u888b\u7dda\u6025\u884c(\u6c60\u888b\u884c)","comment_id":"000218757","target_id":"T000464256","member_id":"000000385582","time":"2015\u5e749\u670816\u65e5 22\u664239\u5206"}]},{"spot_id":"S000918455","plan_id":"P00353844","spot_day":"1","action_type":"1","spot_name":"\u98df\u4e8b\u3001\u30c7\u30b6\u30fc\u30c8\u3002\u4e00\u65e5\u304a\u75b2\u308c\u69d8\u3067\u3059\u3002","stay_time":"180","start_time":"16:00","finish_time":"19:00","spot_pics":"https:\/\/s.yimg.jp\/images\/travel\/dev\/girlip\/v2\/images\/img_spare_300_200.png","uid":"","cid":"","lat":"","lon":"","country_code":""}]},"dayArray":[{"date":"9\/21","dayOfTheWeek":"\u6708"}],"planDaysIndex":0,"member_id":"000000385582","planData":{"userType":102,"planId":"P00353844","planTitle":"\u5b50\u3069\u3082\u306e\u68ee\u516c\u5712\u304b\u3089\u52a0\u6cbb\u4e18\u9675\u3078(\u4eee)\uff56\uff12","planDesc":"\u30e0\u30fc\u30df\u30f3\u5c4b\u6577\u3067\u697d\u3057\u304f\u904a\u307c\u3046\uff01\uff12\uff10\uff11\uff15\u5e74\u30b7\u30eb\u30d0\u30fc\u30a6\u30a3\u30fc\u30af\u9650\u5b9a\uff01","planStartDate":"20150921","planDays":"1","planImg":"\/\/girlip.c.yimg.jp\/girlip-planimg-001\/girlip\/I0\/01\/02\/000102175.jpg","planImg_t":"\/\/girlip.c.yimg.jp\/girlip-planimg-001\/girlip\/I0\/01\/02\/000102175_s.jpg","planStatus":"2","planCS":"","guid":"XKNCSOFFFKBDSOLQX3K4NDCCDE","updateTime":"2015-10-08 15:48:56"},"spotCount":1,"spotImgList":[]};
+//
+YAHOO.JP.girlip.crumb = 'h6/5OmNf5xm';</script>
+
+<script type="text/javascript" src="https://s.yimg.jp/images/commerce/js/libs/jquery/core/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://s.yimg.jp/images/commerce/js/libs/json/2.0.0/json.min.js"></script>
+<script type="text/javascript" src="https://s.yimg.jp/images/travel/dev/girlip/v2/js/common/jquery-ui-1.9.2.custom.js"></script>
+<script type="text/javascript" src="https://s.yimg.jp/images/travel/dev/girlip/v2/js/common/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="https://s.yimg.jp/images/travel/dev/girlip/v2/js/common/underscore-min.js"></script>
+<script type="text/javascript" src="https://s.yimg.jp/images/travel/dev/girlip/v2/js/common/backbone-min.js"></script>
+<script type="text/javascript" src="https://s.yimg.jp/images/travel/dev/girlip/v2/js/common/perfect-scrollbar-0.4.1.with-mousewheel.min.js"></script>
+<script type="text/javascript" src="https://s.yimg.jp/images/travel/dev/girlip/v2/js/common/jquery-trv.placeholder.js"></script>
+<script type="text/javascript" src="https://s.yimg.jp/images/travel/dev/girlip/v2/js/common/jquery.autosize-min.js"></script>
+<script type="text/javascript" src="https://s.yimg.jp/images/travel/dev/girlip/v2/js/common/jquery.easing-min.js"></script>
+<script type="text/javascript" src="https://s.yimg.jp/images/travel/dev/girlip/v2/js/common/jquery.vgrid.min.js"></script>
+
+<script type="text/javascript" src="https://s.yimg.jp/images/travel/dev/girlip/v2/js/1.0.0/view/yjgirlip.view-min.js?20160407"></script>
+<div id="logarea"></div>
+</body>
+</html><script language=javascript>
+if(window.yzq_p==null)document.write("<scr"+"ipt language=javascript src=https://s.yimg.jp/bdv/yahoo/javascript/csc/20060824/lib2obf_b5.js></scr"+"ipt>");
+</script><script language=javascript>
+if(window.yzq_p)yzq_p('P=ZXyWSTEwMC4grZwDWZYrXQ4nMTMzLgAAAACoKo.X&T=15u831dmd%2fX%3d1503013742%2fE%3d2080267536%2fR%3djp_tablet%2fK%3d5%2fV%3d1.1%2fW%3dJ%2fY%3djp%2fF%3d343584617%2fG%3dCmpwCgo-%2fH%3dc2VjdXJlPSJ0cnVlIiBzZWN1cmU9dHJ1ZSBhZGN2ZXI9Ni44LjA-%2fS%3d1%2fJ%3d59962B6E');
+if(window.yzq_s)yzq_s();
+</script><noscript><div style="position:absolute;"><img width=1 height=1 alt="" src="https://b5.yahoo.co.jp/b?P=ZXyWSTEwMC4grZwDWZYrXQ4nMTMzLgAAAACoKo.X&T=1644bugju%2fX%3d1503013742%2fE%3d2080267536%2fR%3djp_tablet%2fK%3d5%2fV%3d3.1%2fW%3dJ%2fY%3djp%2fF%3d2388163794%2fG%3dCmpwCgo-%2fH%3dc2VjdXJlPSJ0cnVlIiBzZWN1cmU9dHJ1ZSBhZGN2ZXI9Ni44LjA-%2fQ%3d-1%2fS%3d1%2fJ%3d59962B6E"></div></noscript>
