@@ -17,7 +17,6 @@
     <meta name="viewport" content="width=device-width,maximum-scale=1.5">
 
     <link href="images/common.css" rel="stylesheet" type="text/css">
-    <!--<link rel="stylesheet" href="images/common_x2.css" media="only screen and (-webkit-min-device-pixel-ratio : 1.5),only screen and (min-device-pixel-ratio : 1.5)">-->
 
     <link href="images/jquery-ui-1_002.css" rel="stylesheet" type="text/css">
     <link href="images/jquery-ui-1.css" rel="stylesheet" type="text/css">
@@ -56,62 +55,17 @@
     width: auto;
 }
 
-.gaiyo_count {
-    width: auto;
-}
-
-.kotei h3 span {
-    height: 45px;
-}
-
-/* スポット追加モーダル 海外注意文言 */
-.spot_modal_subttl_attn {
-    padding-left: 10px;
-}
-
-.comment_ret_btn {
-    position: absolute;
-    top: -152px;
-    left: -40px;
-}
 
 .comment_ret_btn div {
     height: 76px;
     width: 180px;
 }
 
-/* みんなのメモ */
-.modal .frm05 .mm_ex {
-    width: 600px;
-}
-
 .frm05 .mm_btn_ex {
     right: -105px;
 }
 
-.mm_chbox {
-    position: absolute;
-    top: 35px;
-    right: 105px;
-    font-size: 0.75em;
-}
-
-.mm_chbox div {
-    position: absolute;
-    top: 3px;
-    left: 22px;
-    width: 70px;
-    line-height: 1.25em;
-}
-
-/* デザイン調整 編集画面 */
-
 .tabiGaiyo .gWrp h2, .tabiGaiyo .gaiyo, .tabiGaiyo .gaiyo textarea {
-    width: 570px;
-}
-
-/* 上記で効かなかったので */
-#summary_block {
     width: 570px;
 }
 
@@ -124,9 +78,6 @@
     letter-spacing: -1px;
 }
 
-.gaiyo_count {
-    top: 165px;
-}
 
 .header > p {
     /* 0.75だとちっちゃいかも */
@@ -135,47 +86,6 @@
 
 .header li {
     width: 85px;
-}
-
-.mainNav li {
-    font-size: 1em;
-}
-
-.tab_delete_btn {
-    top: -4px;
-    right: 5px;
-    font-size: 1.25em;
-    font-weight: bold;
-    padding: 1px;
-    background: #765946;
-    color: #eee;
-    border-radius: 50px;
-    opacity: 1;
-    filter: alpha(opacity=100); /* ie 6 7 */
-    -ms-filter: "alpha(opacity=100)"; /* ie 8 */
-    text-shadow: none;
-}
-
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) {
-    .tab_delete_btn {
-        top: -7px;
-        right: 8px;
-        width: 25px;
-        height: 25px;
-        line-height: 0.75em;
-        font-size: 1.5em;
-        font-weight: normal;
-    }
-}
-
-.mainNav .tsuika a {
-    padding: 5px 0 0;
-    line-height: 1.2;
-    height: 48px;
-}
-
-.mainNav li a {
-    border-left: medium none;
 }
 
 .tabiTomo h3 {
@@ -190,43 +100,6 @@
     padding: 20px 0 0 20px;
 }
 
-.btnTsuiSak {
-    font-size: 0.75em;
-}
-
-.kotei .ohayo h3 span, .kotei .oyasumi h3 span {
-    font-size: 0.88em;
-}
-
-.kotei .ohayo h3 var {
-    font-size: 1.25em;
-}
-
-.kotei h4, .kotei h4 span {
-    font-size: 1.5em;
-}
-
-.kotei dl {
-    font-size: 0.88em;
-    margin: 7px 0 0;
-    padding: 0 0 3px;
-}
-
-.kotei .spot .spot_rating_wrap {
-    position: relative;
-    top: 2px;
-}
-
-.kotei .btnEdit {
-    font-size: 0.88em;
-    line-height: 56px;
-}
-
-.btnTsuika {
-    font-size: 1.25em;
-    line-height: 62px;
-}
-
 /* コメント系 */
 .comment > ul > li img {
     width: 60px;
@@ -237,27 +110,9 @@
     font-size: 0.88em;
 }
 
-/* 追加モーダル系 */
-.modal .gallery li > a {
-    padding: 45px 0 0 25px;
-}
-
 .gallery02 li p {
     font-size: 0.75em;
     text-shadow: -1px -1px 3px #fff, 1px -1px 3px #fff, -1px 1px 3px #fff, 1px 1px 3px #fff;
-}
-
-.modal .gallery li strong {
-    text-shadow: 0 0 4px #777777;
-}
-
-.modal .gallery li img {
-    -webkit-border-top-left-radius: 3px;
-    -webkit-border-top-right-radius: 3px;
-    -moz-border-radius-topleft: 3px;
-    -moz-border-radius-topright: 3px;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
 }
 
 /* デザイン調整 閲覧画面 */
@@ -354,106 +209,15 @@
     top: -3px;
 }
 
-/* QA指摘対応 */
-/* 編集モーダル80文字制限メッセージ */
-.edit_lim_txt {
-    position: absolute;
-    top: 93px;
-    right: 70px;
-    font-size: 0.88em;
-    color: #444444;
-
-}
-
-/* これなんで -40px 付けたんですかね？ */
-.modal .btn04 {
-    margin: 0;
-}
-
-/* 背景画像変更枠 */
-.haikei_girlip_osusume_ret {
-    position: absolute;
-    top: 8px;
-    left: 62px;
-    font-size: 0.88em;
-    letter-spacing: 1px;
-    text-shadow: 0 0 3px #fff, 0 0 3px #fff;
-}
-
 .haikei_girlip_osusume_ret a {
     color: #765946;
     font-weight: bold;
-}
-
-/* 背景画像変更form */
-.frm04 {
-    position: relative;
-}
-
-.haikei_up_err {
-    position: absolute;
-    top: 12px;
-    left: 30px;
-    color: #f00;
-    display: none;
-}
-
-/* 必須項目バッジ */
-.title_nes {
-    position: absolute;
-    top: 7px;
-    left: 625px;
-    width: 70px;
-    padding: 6px 0;
-    text-align: center;
-    background: #fc649d;
-    font-size: 0.63em;
-    color: #fff;
-    border: 3px solid #fff;
-    border-radius: 20px;
 }
 
 .title_nes span {
     font-size: 0.75em;
 }
 
-/* モーダル閉じるボタン用 */
-.modal_batsu_a {
-    display: block;
-    position: absolute;
-    top: 25px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-}
-
-.modal .batsu {
-    position: static;
-}
-
-/* 日付の選択済みタブ */
-.mainNav .sel a {
-    cursor: default;
-}
-
-/* ソートハンドル領域のカーソル形状 */
-.kotei .btnShosai {
-    cursor: s-resize;
-}
-
-/* スポット追加時エラー */
-.spot_search_err {
-    position: absolute;
-    top: 120px;
-    left: 0px;
-    font-size: 0.88em;
-    color: #f00;
-}
-
-.spot_modal_second {
-    position: relative;
-}
 
 /* IE透過背景対策 タイトル、概要系*/
 .tabiGaiyo .gWrp h2, .tabiGaiyo .gaiyo, .tabiGaiyo .date, .tabiGaiyo .change {
@@ -467,62 +231,15 @@
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://s.yimg.jp/images/travel/dev/girlip/v2/images/bg_semitrnsp_01.png', sizingMethod='scale');
 }
 
-/* スポットのノーヒットずれてる */
-.gllr02Wrp > .spot_nohit_free {
-    display: none;
-    left: 20px;
-    position: absolute;
-    top: 0;
-    width: 650px;
-}
-
-.gllr02Wrp > .spot_nohit_free > form {
-    margin: 70px 0;
-    width: 605px;
-}
-
-/* なぜかずれているので */
-.mod_modal_error {
-    top: 90px;
-}
-
-/* 移動情報入力時に出す路線へのリンク */
-.mordal_link_transit {
-    position: absolute;
-    right: 0;
-    top: 110px;
-}
-
-.modal .comment .comment_wrapper .memo a.urlLabel {
-    color: #F14077;
-}
-
 --></style>
 
 
-<style type="text/css"><!--
-
-/* common.css新規 */
-.viewModal .comment_modal_delete {
-    margin-top: 0;
-}
-
-/* 印刷用 */
-@media print {
-    .print_sioryback, #emg, #emg2, #emg3 {
-        display: none;
-    }
-}
-
--->
-</style>
-
 <div id="init_cover" class="init_load_wrap" style="display: none;">
     <div class="init_load_bg"></div>
-    <img class="init_load_img" src="images/loading.gif"></div>
-<!-- ローディング -->
+    <img class="init_load_img" src="images/loading.gif">
+</div>
 
-<!-- .tabiGaiyo -->
+
 <div class="tabiGaiyo" style="height: 315px; border-bottom: 10px solid rgb(204, 204, 204);">
     <img src="images/000102175.jpg" alt="">
     <div class="gWrp02"><h2>子どもの森公園から加治丘陵へ(仮)ｖ２</h2>
@@ -534,11 +251,7 @@
             <small>（月）</small>
         </dd>
     </dl>
-    <ul class="mainNav" style="display: none;">
-        <li tabindex="0" class="sel">9/21 月</li>
-    </ul>
 </div>
-<!-- /.tabiGaiyo -->
 
 
 <div style="display: block;" class="schedView" id="print_wrap">
@@ -661,7 +374,8 @@
         </div>
         <div class="print_unit" style="width: 800px; padding-left: 100px; text-align: left; margin: 25px 0px 50px;">
             <div class="print_itwrap" style="position: relative; font-size: 1.38em; color: rgb(118, 89, 70); padding-left: 50px;">16:00
-                <span class="leader" style="padding: 0px 5px;">・・・</span>19:00
+                <span class="leader" style="padding: 0px 5px;">・・・</span>
+                19:00
                 <div class="print_unitTitle" style="color: rgb(68, 68, 68); margin-top: 15px; font-weight: bold;">
                     食事、デザート。一日お疲れ様です。
                 </div>
@@ -685,14 +399,6 @@
         <address>Copyright (C) 2013 Yahoo Japan Corporation. All Rights Reserved.</address>
     </div><!--/.footer-->
 </div><!--/.contentsFooter-->
-
-<div class="modal" id="tabitomo_modal_message_1"><a class="modal_batsu_a" href="javascript:void(0);"><span
-        class="batsu mdl_cancel"><span>×</span>とじる</span></a>
-    <h3 class="nmdl mdl5" id="normal_modal_text">確認</h3>
-    <div class="edit_confirm_btn edit_confirm_btn3">
-        <a href="javascript:void(0);" class="btn07 normal_modal_bp" id="normal_modal_cancel"><span>キャンセル</span></a>
-    </div>
-</div>
 
 <script type="text/javascript" src="images/jquery_003.js"></script>
 <script type="text/javascript" src="images/json.js"></script>
