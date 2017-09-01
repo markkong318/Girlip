@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 class TripItem extends React.Component {
 
     render() {
+        console.log('item');
+        console.log(this.props);
         const {start_time, end_time, title} = this.props;
 
         return (
@@ -49,13 +51,7 @@ class TripItem extends React.Component {
 }
 
 const mapStateToProps = (state, props) => {
-    const default_state = {
-        start_time: '10:00',
-        end_time: '11:00',
-        title: '西武池袋線急行で池袋駅→元加治駅'
-    };
-
-    return default_state;
+    // return state;
 };
 
 

@@ -26,15 +26,7 @@ class TripHeader extends React.Component {
 }
 
 const mapStateToProps = (state, props) => {
-    const default_state = {
-        title: '子どもの森公園から加治丘陵へ(仮)ｖ２',
-        description: 'ムーミン屋敷で楽しく遊ぼう！２０１５年シルバーウィーク限定！',
-        month: 9,
-        day: 21,
-        day_of_week: '月',
-    }
-
-    return default_state;
+    return state;
 };
 
 

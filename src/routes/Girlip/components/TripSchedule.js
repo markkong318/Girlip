@@ -5,6 +5,10 @@ import TripItem from './TripItem'
 class TripSchedule extends React.Component {
 
     render() {
+        console.log(this.props);
+        const {schedule, month, day, day_of_week} = this.props;
+        console.log('schedule')
+        console.log(schedule);
 
         return (
             <div style={{display: 'block'}} className="schedView" id="print_wrap">
@@ -13,10 +17,15 @@ class TripSchedule extends React.Component {
                 </div>
                 <div className="chuo group" style={{backgroundPosition: '35px 0px'}}>
                     <h3 className="ohy" style={{fontSize: '87.5%', fontWeight: 'normal'}}>
-                        <span style={{margin: '0px'}}>9月21日（月）</span>
+                        <span style={{margin: '0px'}}>{month}月{day}日（{day_of_week}）</span>
                     </h3>
 
-                    <TripItem />
+                    {schedule.map((item, key) => {
+                        console.log('item'.item);
+                        return (<TripItem key={key} {...item}/>);
+                    })};
+
+                    {/*<TripItem />*/}
 
                     <h3 className="oys">
                         <span style={{margin: '0px'}}>おかえり</span>
@@ -29,7 +38,7 @@ class TripSchedule extends React.Component {
 }
 
 const mapStateToProps = (state, props) => {
-
+    return props;
 };
 
 
