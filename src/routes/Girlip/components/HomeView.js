@@ -38,7 +38,12 @@ const mapStateToProps = (state, props) => {
                     end_time: '11:00',
                     title: '西武池袋線急行で池袋駅→元加治駅',
 
-                    conversation: []
+                    comment: [
+                        {
+                            user_name: 'mark',
+                            description: 'test1<br />test2',
+                        }
+                    ]
                 }
             ]
 

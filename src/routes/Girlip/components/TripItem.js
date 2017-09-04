@@ -1,12 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux'
+import TripComment from './TripComment'
 
 class TripItem extends React.Component {
 
     render() {
-        console.log('item');
-        console.log(this.props);
-        const {start_time, end_time, title} = this.props;
+        const {start_time, end_time, title, comment} = this.props;
 
         return (
             <div className="print_unit"
@@ -43,6 +42,10 @@ class TripItem extends React.Component {
                                 463円
                             </div>
                         </div>
+
+                        {comment.map((item, key) => {
+                            return (<TripComment key={key} {...item}/>);
+                        })}
                     </div>
                 </div>
             </div>

@@ -21,11 +21,9 @@ class TripSchedule extends React.Component {
                     </h3>
 
                     {schedule.map((item, key) => {
-                        console.log('item'.item);
                         return (<TripItem key={key} {...item}/>);
-                    })};
+                    })}
 
-                    {/*<TripItem />*/}
 
                     <h3 className="oys">
                         <span style={{margin: '0px'}}>おかえり</span>
