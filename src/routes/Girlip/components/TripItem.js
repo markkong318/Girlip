@@ -21,28 +21,6 @@ class TripItem extends React.Component {
                         {title}
                     </div>
                     <div style={{marginTop: '20px'}}>
-                        <div className="print_comunit" style={{position: 'relative', fontSize: '0.63em', minHeight: '70px'}}>
-                            <img src="images/img_tabitomonoimage_03.png" style={{
-                                position: 'absolute',
-                                top: '0px',
-                                left: '0px',
-                                borderRadius: '100px',
-                                width: '54px',
-                                height: '54px'
-                            }}/>
-                            <div className="print_intext" style={{
-                                paddingLeft: '70px',
-                                color: 'rgb(68, 68, 68)',
-                                lineHeight: '1.25em',
-                                marginBottom: '20px'
-                            }}>
-                                <span className="print_comname" style={{color: 'rgb(118, 89, 70)'}}>go*g_*in*ia</span>
-                                <br/>10:03-10:46
-                                西武池袋線急行(飯能行)
-                                463円
-                            </div>
-                        </div>
-
                         {comment.map((item, key) => {
                             return (<TripComment key={key} {...item}/>);
                         })}
