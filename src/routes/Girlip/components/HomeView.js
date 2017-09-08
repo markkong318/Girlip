@@ -25,6 +25,11 @@ class HomeView extends React.Component {
 }
 
 const mapStateToProps = (state, props) => {
+    /*
+    icon: train, gourmet, foot, heart, starts, toho, bus, plane,ferry,car,bicycle
+     */
+
+
     const default_state = {
         trip: {
             title: '子どもの森公園から加治丘陵へ(仮)ｖ２',
