@@ -5,7 +5,7 @@ import TripComment from './TripComment'
 class TripItem extends React.Component {
 
     render() {
-        const {start_time, end_time, title, comment} = this.props;
+        const {start_time, end_time, title, comment, icon} = this.props;
 
         return (
             <div className="print_unit"
@@ -14,7 +14,7 @@ class TripItem extends React.Component {
                     {start_time}
                     <span className="leader" style={{padding: '0px 5px'}}>・・・</span>
                     {end_time}
-                    <span className="train type03 print_icon" style={{position: 'absolute', top: '-12px', left: '0px'}}>
+                    <span className={`${icon} type03 print_icon`} style={{position: 'absolute', top: '-12px', left: '0px'}}>
                     <span></span>
                 </span>
                     <div className="print_unitTitle" style={{color: 'rgb(68, 68, 68)', marginTop: '15px', fontWeight: 'bold'}}>

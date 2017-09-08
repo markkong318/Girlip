@@ -4,11 +4,11 @@ import { connect } from 'react-redux'
 class TripHeader extends React.Component {
 
     render() {
-        const {title, description, month, day, day_of_week} = this.props;
+        const {title, description, cover_image, month, day, day_of_week} = this.props;
 
         return (
             <div className="tabiGaiyo" style={{height: '315px', borderBottom: '10px solid rgb(204, 204, 204)'}}>
-                <img src="images/000102175.jpg" alt="" />
+                <img src={cover_image} alt="" style={{objectFit: 'cover'}} />
                 <div className="gWrp02">
                     <h2>{title}</h2>
                     <p>{description}</p>

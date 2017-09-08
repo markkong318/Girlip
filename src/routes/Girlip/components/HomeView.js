@@ -29,6 +29,7 @@ const mapStateToProps = (state, props) => {
         trip: {
             title: '子どもの森公園から加治丘陵へ(仮)ｖ２',
             description: 'ムーミン屋敷で楽しく遊ぼう！２０１５年シルバーウィーク限定！',
+            cover_image: 'images/000102175.jpg',
             month: 9,
             day: 21,
             day_of_week: '月',
@@ -37,6 +38,7 @@ const mapStateToProps = (state, props) => {
                     start_time: '10:00',
                     end_time: '11:00',
                     title: '西武池袋線急行で池袋駅→元加治駅',
+                    icon: 'train',
 
                     comment: [
                         {
@@ -44,7 +46,21 @@ const mapStateToProps = (state, props) => {
                             description: 'test1<br />test2',
                         }
                     ]
-                }
+                },
+                {
+                    start_time: '10:00',
+                    end_time: '11:00',
+                    title: '西武池袋線急行で池袋駅→元加治駅',
+                    icon: 'foot',
+
+                    comment: [
+                        {
+                            user_name: 'mark',
+                            description: 'test1<br />test2' +
+                            '<table><tr><td>aaaaa</td><td>bbbbbb</td></tr></table>',
+                        }
+                    ]
+                },
             ]
 
         }
