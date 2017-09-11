@@ -49,7 +49,7 @@ const mapStateToProps = (state, props) => {
                         {
                             user_name: 'mark',
                             description: 'test1<br />test2',
-                        }
+                        },
                     ]
                 },
                 {
@@ -64,7 +64,7 @@ const mapStateToProps = (state, props) => {
                         },
                         {
                             type: 'spot',
-                            image: 'images/lrg_13144487.jpg',
+                            image: 'https://www.cathaypacific.com/content/dam/destinations/tokyo/kamakura/cityguide-gallery/tokyo-kamakura_cherry_blossoms_920x500.jpg',
                             title: '子どもの森公園',
                             address: '埼玉県飯能市大字阿須893-1',
                             information: '電話番号 ： 042-972-7711'
@@ -76,7 +76,7 @@ const mapStateToProps = (state, props) => {
                             user_name: 'mark',
                             description: 'test1<br />test2' +
                             '<table><tr><td>aaaaa</td><td>bbbbbb</td></tr></table>',
-                        }
+                        },
                     ]
                 },
             ]
