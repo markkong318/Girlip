@@ -55,8 +55,21 @@ const mapStateToProps = (state, props) => {
                 {
                     start_time: '10:00',
                     end_time: '11:00',
-                    title: '西武池袋線急行で池袋駅→元加治駅',
                     icon: 'foot',
+
+                    content:[
+                        {
+                            type: 'unit',
+                            title: '西武池袋線急行で池袋駅→元加治駅',
+                        },
+                        {
+                            type: 'spot',
+                            image: 'images/lrg_13144487.jpg',
+                            title: '子どもの森公園',
+                            address: '埼玉県飯能市大字阿須893-1',
+                            information: '電話番号 ： 042-972-7711'
+                        },
+                    ],
 
                     comment: [
                         {
