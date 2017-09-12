@@ -32,23 +32,89 @@ const mapStateToProps = (state, props) => {
 
     const default_state = {
         trip: {
-            title: '子どもの森公園から加治丘陵へ(仮)ｖ２',
-            description: 'ムーミン屋敷で楽しく遊ぼう！２０１５年シルバーウィーク限定！',
+            title: '御岳山から日の出山へ(仮)ｖ１',
+            description: '',
             cover_image: 'images/000102175.jpg',
-            month: 9,
-            day: 21,
-            day_of_week: '月',
+            month: 10,
+            day: 'XX',
+            day_of_week: '土',
             schedule: [
                 {
                     start_time: '10:00',
                     end_time: '11:00',
-                    title: '西武池袋線急行で池袋駅→元加治駅',
                     icon: 'train',
+
+                    content:[
+                        {
+                            type: 'unit',
+                            title: '新宿駅→青梅駅→御嶽駅',
+                        },
+                    ],
+
+                    comment: [
+                    ]
+                },
+                {
+                    start_time: '10:00',
+                    end_time: '11:00',
+                    icon: 'foot',
+
+                    content:[
+                        {
+                            type: 'unit',
+                            title: '御嶽駅→ケーブル下バス停',
+                        },
+                        {
+                            type: 'spot',
+                            image: 'https://www.cathaypacific.com/content/dam/destinations/tokyo/kamakura/cityguide-gallery/tokyo-kamakura_cherry_blossoms_920x500.jpg',
+                            title: '7-11',
+                            address: '',
+                            information: '昼ご飯を買いましょ'
+                        },
+                    ],
 
                     comment: [
                         {
-                            user_name: 'mark',
-                            description: 'test1<br />test2',
+                        },
+                    ]
+                },
+                {
+                    start_time: '10:00',
+                    end_time: '11:00',
+                    icon: 'train',
+
+                    content:[
+                        {
+                            type: 'unit',
+                            title: '滝本駅→御岳山駅',
+                        },
+                        {
+                            type: 'spot',
+                            image: 'http://www.honda.co.jp/dog/travel/data/mitaketozan/image/00.jpg',
+                            title: '御岳山ケーブルカー',
+                            address: '',
+                            information: '片道590円、往復割引あり<br />' +
+                            '時刻表は<a href="https://www.mitaketozan.co.jp/timetable">ここ</a>'
+                        },　
+                    ],
+
+                    comment: [
+                    ]
+                },
+                {
+                    start_time: '10:00',
+                    end_time: '11:00',
+                    icon: 'foot',
+
+                    content:[
+                        {
+                            type: 'unit',
+                            title: '御岳山駅→日の出山',
+                        },
+                    ],
+
+                    comment: [
+                        {
                         },
                     ]
                 },
