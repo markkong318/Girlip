@@ -15,7 +15,7 @@ class HomeView extends React.Component {
         const location = this.props.location.query.location;
 
         if (location) {
-            this.props.fetchPostsWithRedux(`/trip/${location}.json`);
+            this.props.fetchPostsWithRedux(`trip/${location}.json`);
         }
     }
 
