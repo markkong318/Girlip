@@ -21,14 +21,14 @@ class TripItem extends React.Component {
 
                         if (item.type == 'unit') {
                             return (
-                                <div className="print_unitTitle" style={{color: 'rgb(68, 68, 68)', marginTop: '15px', fontWeight: 'bold'}}>
+                                <div key={key} className="print_unitTitle" style={{color: 'rgb(68, 68, 68)', marginTop: '15px', fontWeight: 'bold'}}>
                                     {item.title}
                                 </div>
                             );
 
                         }else if(item.type == 'spot') {
                             return (
-                                <div className="print_spotWrap" style={{position: 'relative', paddingLeft: '220px', height: '120px', marginTop: '15px', color: 'rgb(68, 68, 68)'}}>
+                                <div key={key} className="print_spotWrap" style={{position: 'relative', paddingLeft: '220px', height: '120px', marginTop: '15px', color: 'rgb(68, 68, 68)'}}>
                                     <img className="print_spotImage" src={item.image} style={{position: 'absolute', top: '0px', left: '0px', width: '190px', height: '120px', border: '1px solid rgb(118, 89, 70)', borderRadius: '5px', marginLeft: '2px', objectFit: 'cover'}} />
                                     <div className="print_unitTitle2" style={{fontSize: '1.06em', fontWeight: 'bold', marginBottom: '15px'}}>
                                         {item.title}
@@ -57,12 +57,11 @@ class TripItem extends React.Component {
 }
 
 const mapStateToProps = (state, props) => {
-    // return state;
+    return state;
 };
 
 
 const mapDispatchToProps = (dispatch) => {
-
     return {
 
     };

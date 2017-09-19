@@ -20,7 +20,7 @@ class TripSchedule extends React.Component {
                         <span style={{margin: '0px'}}>{month}月{day}日（{day_of_week}）</span>
                     </h3>
 
-                    {schedule.map((item, key) => {
+                    {schedule && Object.keys(schedule).length > 0 && schedule.map((item, key) => {
                         return (<TripItem key={key} {...item}/>);
                     })}
 
