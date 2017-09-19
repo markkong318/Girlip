@@ -34,7 +34,7 @@ class TripItem extends React.Component {
                                         {item.title}
                                     </div>
                                     <div className="print_spotCtnt" style={{fontSize: '0.63em', marginBottom: '20px'}}>{item.address}
-                                        <div className="print_spotTel" style={{marginTop: '5px'}}>
+                                        <div className="print_spotTel" style={{marginTop: '5px', lineHeight: '18px'}}>
                                             <div dangerouslySetInnerHTML={{__html: item.information}} />
                                         </div>
                                     </div>
