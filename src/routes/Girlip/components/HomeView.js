@@ -1,5 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import DocumentMeta from 'react-document-meta';
+
 import PageHeader from './PageHeader'
 import TripHeader from './TripHeader'
 import TripSchedule from './TripSchedule'
@@ -22,8 +24,28 @@ class HomeView extends React.Component {
     render() {
         const { trip } = this.props;
 
+        const meta = {
+            title: `${trip.title || ''}`,
+            meta: {
+                charset: 'utf-8',
+                name: {
+                    keywords: '旅行プラン,ガイドブック,しおり,女子旅',
+                    description: '友達とつくる、旅のしおり。カンタンな予定登録や、旅先で便利な地図など、旅の計画をもっと便利に楽しく。',
+                    viewport: 'width=device-width,maximum-scale=1.5'
+                },
+                property: {
+                    'og:image': 'https://s.yimg.jp/images/kazoc/pc/promo/teasersite/img/kazoc_ogp_image.jpg',
+                    'og:url': 'https://girlip.travel.yahoo.co.jp/about/',
+                    'og:site_name': 'Yahoo!トラベル ガーリップ',
+                    'og:type': 'website',
+                    'fb:app_id': 277401169050113
+                }
+            }
+        };
+
         return (
             <div>
+                <DocumentMeta {...meta} />
                 <PageHeader />
                 <TripHeader {...trip} />
                 <TripSchedule {...trip} />
