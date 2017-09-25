@@ -5,10 +5,7 @@ import TripItem from './TripItem'
 class TripSchedule extends React.Component {
 
     render() {
-        console.log(this.props);
         const {schedule, month, day, day_of_week} = this.props;
-        console.log('schedule')
-        console.log(schedule);
 
         return (
             <div style={{display: 'block'}} className="schedView" id="print_wrap">
