@@ -7,7 +7,7 @@ class TripHeader extends React.Component {
         const {title, description, cover_image, month, day, day_of_week} = this.props;
 
         return (
-            <div className="tabiGaiyo" style={{height: '315px', borderBottom: '10px solid rgb(204, 204, 204)'}}>
+            <div className="tabiGaiyo" style={{width: '100%', height: '315px', borderBottom: '10px solid rgb(204, 204, 204)'}}>
                 <img src={cover_image} alt="" style={{objectFit: 'cover'}} />
                 <div className="gWrp02">
                     <h2>{title}</h2>
